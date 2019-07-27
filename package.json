@@ -9,7 +9,7 @@
     "css": "node-sass --include-path scss src/assets/css/main.scss build/public/main.css",
     "dev": "npm-run-all --parallel webpack:*",
     "start": "node build/bundle.js",
-    "heroku-postbuild": "webpack --config webpack.client.js && webpack --config webpack.server.js"
+    "heroku-postbuild": "webpack --config webpack.server.js && webpack --config webpack.client.js"
   },
   "repository": {
     "type": "git",
