@@ -8,7 +8,8 @@
     "webpack:start": "nodemon --watch build build/bundle.js",
     "css": "node-sass --include-path scss src/assets/css/main.scss build/public/main.css",
     "dev": "npm-run-all --parallel webpack:*",
-    "start": "webpack --config webpack.client.js && webpack --config webpack.server.js && node build/bundle.js"
+    "start": "node build/bundle.js",
+    "heroku-postbuild": "webpack --config webpack.client.js && webpack --config webpack.server.js"
   },
   "repository": {
     "type": "git",
