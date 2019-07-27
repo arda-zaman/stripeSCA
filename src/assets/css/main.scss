@@ -1,0 +1,19 @@
+
+/*
+* BASE CSS
+*/
+
+@import './general.scss';
+@import './variables.scss';
+@import './fonts.scss';
+@import './normalize.scss';
+
+/*
+* COMPONENTS
+*/
+
+@import './header.scss';
+@import './stepper.scss';
+@import './home.scss';
+@import './products.scss';
+@import './checkout.scss';

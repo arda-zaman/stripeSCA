@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+header {
+  background: $purple;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  a {
+    color: $green;
+    font-weight: bold;
+  }
+}

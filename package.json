@@ -1,0 +1,71 @@
+{
+  "name": "stripe-psd2",
+  "version": "1.0.0",
+  "description": "Stripe SCA commerce website",
+  "scripts": {
+    "webpack:server": "webpack --config webpack.server.js --watch --mode development",
+    "webpack:client": "webpack --config webpack.client.js --watch --mode development",
+    "webpack:start": "nodemon --watch build build/bundle.js",
+    "css": "node-sass --include-path scss src/assets/css/main.scss build/public/main.css",
+    "dev": "npm-run-all --parallel webpack:*",
+    "start": "webpack --config webpack.client.js && webpack --config webpack.server.js && node build/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arda-zaman/stripeSCA.git"
+  },
+  "keywords": [
+    "StripeSCA",
+    "PSD2",
+    "SCA"
+  ],
+  "author": "Arda Zaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arda-zaman/stripeSCA/issues"
+  },
+  "homepage": "https://github.com/arda-zaman/stripeSCA#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-stripe-elements": "^4.0.0",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "url-loader": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "image-webpack-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "redux-devtools-extension": "^2.13.8",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
+  }
+}

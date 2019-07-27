@@ -1,0 +1,77 @@
+@import './variables.scss';
+
+.stepbox {
+  width: 100%;
+  height: 120px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  margin: 40px 0;
+  margin-bottom: 80px;
+  
+  .stepbar {
+    counter-reset: step;
+    li {
+      width: 33.33%;
+      float: left;
+      font-size: 14px;
+      font-family: Lato;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #444;
+      line-height:3;
+
+      &:before {
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        content: counter(step);
+        counter-increment: step;
+        font-size: 26px;
+        line-height: 45px;
+        border: 5px solid #b9cbe8;
+        display: block;
+        margin: 0 auto 10px auto; // ***very important
+        text-align: center;
+        background-color: #338fd6;
+        border-radius: 50%;
+        position: relative;
+        z-index:2;
+      }
+      &:after {
+        width: 100%;
+        height: 4px;
+        content: '';        
+        background-color: #b9cbe8;
+        top: 25px;
+        left: -50%; //**very important
+        position: absolute;
+        z-index: 1;
+      }
+      &:first-child {
+        &:after {
+          content: none;
+        }
+      }
+    }
+    
+    li.step_active {
+      &:before {
+        background-color:#efc247;
+      }
+    }
+
+    li.step_highlight {
+      &:before {
+        box-shadow: 0 0 0 10px #626f84;
+      }
+    }
+
+    li.step_done {
+      &:before {
+        background-color: $green;
+      }
+    }
+  }
+}
